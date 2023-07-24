@@ -8,8 +8,8 @@ public class DatabaseConnection {
 
     public Connection getConnection(){
         String databaseName ="sys";
-        String databaseUser = "root";
-        String databasePassword = "sara4157";
+        String databaseUser = "";
+        String databasePassword = "";
         String url = "jdbc:mysql://localhost/" + databaseName;
 
         try{
