@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="673.0" style="-fx-background-color: #0d1b2a;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscreen.HelloController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" style="-fx-background-color: #415a77;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutY="219.0" prefHeight="48.0" prefWidth="228.0" text="ROAD TO HUNDREDS" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="13.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.605" offsetY="3.0" radius="6.70375" spread="0.23" width="12.21" />
+               </effect>
+            </Label>
+            <Label alignment="CENTER" layoutY="246.0" prefHeight="48.0" prefWidth="228.0" text="ADMIN PANEL" textFill="WHITE">
+               <font>
+                  <Font name="Nirmala UI Bold" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="16.605" offsetY="3.0" radius="6.70375" spread="0.23" width="12.21" />
+               </effect>
+            </Label>
+            <Line endX="100.0" layoutX="114.0" layoutY="257.0" scaleX="0.5" startX="-100.0" stroke="WHITE" strokeMiterLimit="5.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Line>
+            <Text fill="#e0e1dd" layoutX="48.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2023 @ RTH Tutoring co." />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: #0d1b2a;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#e0e1dd" layoutX="-2.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fill="#e0e1dd" layoutX="-2.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+               <font>
+                  <Font name="Segoe UI Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="68.0" layoutY="206.0" style="-fx-background-color: white;" />
+            <PasswordField fx:id="passwordPasswordField" alignment="CENTER" layoutX="68.0" layoutY="244.0" style="-fx-background-color: white;" />
+            <Button fx:id="loginButton" layoutX="-4.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #778da9; -fx-background-radius: 0;" text="Login" textFill="WHITE" />
+            <Text fill="#e0e1dd" layoutX="-37.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secure Login" textAlignment="CENTER" wrappingWidth="290.09765625">
+               <font>
+                  <Font name="Segoe UI Bold" size="22.0" />
+               </font>
+            </Text>
+            <Button fx:id="cancelButton" cancelButton="true" layoutX="-4.0" layoutY="313.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #ed7288; -fx-background-radius: 0;" text="Cancel" textFill="WHITE" />
+            <Text fx:id="loginMessageLabel" fill="#e86c6c" layoutX="-39.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="290.09765625">
+               <font>
+                  <Font name="Segoe UI Italic" size="12.0" />
+               </font>
+            </Text>
+            <Button fx:id="openManager" disable="true" layoutX="-25.0" layoutY="161.0" mnemonicParsing="false" onAction="#switchToStudentManager" prefHeight="194.0" prefWidth="265.0" style="-fx-background-color: #0d1b2a; -fx-background-radius: 0;" text="Student Manager 👥" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Segoe UI Bold" size="17.0" />
+               </font>
+               <effect>
+                  <DropShadow height="3.41" offsetX="1.0" offsetY="2.0" radius="3.4050000000000002" width="12.21" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="48.0" fitWidth="57.0" layoutX="254.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Downloads/ll.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="995.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.loginscreen.studentManagerController">
+   <top>
+      <AnchorPane prefHeight="27.0" prefWidth="995.0" style="-fx-background-color: #43464B;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#001d3d" height="101.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="995.0" />
+            <Text fx:id="helloText" fill="#ffc300" layoutX="14.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student Manager 👥" wrappingWidth="402.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book Italic" size="42.0" />
+               </font>
+            </Text>
+            <Label fx:id="dateText" layoutX="843.0" layoutY="37.0" text="xx/xx/xx" textFill="#ffc300">
+               <font>
+                  <Font name="Futura Md BT Medium" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #003566;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#000814" layoutX="1.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Student" textAlignment="CENTER" wrappingWidth="306.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="26.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="14.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="80.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameInput" layoutX="85.0" layoutY="84.0" prefHeight="26.0" prefWidth="199.0" promptText="Student Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Text fill="WHITE" layoutX="14.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classes:" wrappingWidth="80.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="classInput" layoutX="83.0" layoutY="123.0" prefHeight="26.0" prefWidth="202.0" promptText="6" />
+            <Text fill="WHITE" layoutX="14.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number:" wrappingWidth="80.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="18.0" />
+               </font>
+            </Text>
+            <TextField fx:id="numberInput" layoutX="183.0" layoutY="162.0" prefHeight="26.0" prefWidth="101.0" promptText="000-000-0000">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addStudentButton" layoutX="83.0" layoutY="229.0" mnemonicParsing="false" onAction="#setAddStudentButton" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: ffd60a;" text="Add Student" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+            <Text fx:id="infoText" fill="#dd6b6b" layoutX="6.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="306.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="#000814" layoutX="1.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Reciept" textAlignment="CENTER" wrappingWidth="306.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="26.0" />
+               </font>
+            </Text>
+            <TextField fx:id="recieptName" layoutX="53.0" layoutY="384.0" prefHeight="26.0" prefWidth="201.0" promptText="Student Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="recieptMoney" layoutX="53.0" layoutY="422.0" prefHeight="26.0" prefWidth="201.0" promptText="\$$$" />
+            <TextField fx:id="recieptExtra" layoutX="53.0" layoutY="459.0" prefHeight="26.0" prefWidth="202.0" promptText="Extra Comments" />
+            <Button fx:id="makeReceipt" layoutX="83.0" layoutY="510.0" mnemonicParsing="false" onAction="#generateReceipt" prefHeight="40.0" prefWidth="142.0" style="-fx-background-color: ffd60a;" text="Generate Reciept" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="631.0" prefWidth="200.0" style="-fx-background-color: #003566;" BorderPane.alignment="CENTER">
+         <children>
+            <ListView fx:id="studentListView" layoutX="6.0" layoutY="104.0" prefHeight="453.0" prefWidth="333.0" style="-fx-background-color: #43464B;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ListView>
+            <Text fill="#000814" layoutX="100.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student List" textAlignment="CENTER" wrappingWidth="145.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="26.0" />
+               </font>
+            </Text>
+            <Button layoutX="152.0" layoutY="55.0" mnemonicParsing="false" onAction="#loadStudents" prefHeight="27.0" prefWidth="41.0" style="-fx-background-color: ffd60a;" text="🔃" textFill="WHITE">
+               <effect>
+                  <Bloom threshold="0.39" />
+               </effect>
+               <font>
+                  <Font name="Candara Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="631.0" prefWidth="336.0" style="-fx-background-color: #003566;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#000814" layoutX="18.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Attendance" textAlignment="CENTER" wrappingWidth="300.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="26.0" />
+               </font>
+            </Text>
+            <Text fill="#ababab" layoutX="18.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select students" textAlignment="CENTER" wrappingWidth="300.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="arrayText" fill="WHITE" layoutX="17.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student List" textAlignment="CENTER" wrappingWidth="301.13671875">
+               <font>
+                  <Font name="Futura Bk BT Book" size="20.0" />
+               </font>
+            </Text>
+            <ListView fx:id="arrayTable" layoutX="58.0" layoutY="102.0" prefHeight="186.0" prefWidth="220.0" style="-fx-background-color: #43464B;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ListView>
+            <Button fx:id="makePDFButton" layoutX="97.0" layoutY="362.0" mnemonicParsing="false" onAction="#generatePDF" prefHeight="43.0" prefWidth="142.0" style="-fx-background-color: ffd60a;" text="Generate Attendance" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fill="#000814" layoutX="17.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Classes" textAlignment="CENTER" wrappingWidth="300.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="26.0" />
+               </font>
+            </Text>
+            <TextField fx:id="classesName" layoutX="67.0" layoutY="481.0" prefHeight="26.0" prefWidth="201.0" promptText="Student Name">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="classesValue" layoutX="67.0" layoutY="519.0" prefHeight="26.0" prefWidth="201.0" promptText="New Class Amount" />
+            <Button fx:id="editButton" layoutX="97.0" layoutY="560.0" mnemonicParsing="false" onAction="#changeStudentValue" prefHeight="43.0" prefWidth="142.0" style="-fx-background-color: ffd60a;" text="Edit" textFill="WHITE">
+               <effect>
+                  <Bloom threshold="0.89" />
+               </effect>
+               <font>
+                  <Font name="Candara Bold" size="12.0" />
+               </font>
+            </Button>
+            <Text fx:id="classesInfo" fill="#7ae880" layoutX="18.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="300.009765625">
+               <font>
+                  <Font name="Futura Bk BT Book" size="15.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </right>
+</BorderPane>

@@ -1,0 +1,98 @@
+{
+  "requests": [
+    {
+      "addChart": {
+        "chart": {
+          "spec": {
+            "title": "Model Q1 Sales",
+            "basicChart": {
+              "chartType": "COLUMN",
+              "legendPosition": "BOTTOM_LEGEND",
+              "axis": [
+                {
+                  "position": "BOTTOM_AXIS",
+                  "title": "Model Numbers"
+                },
+                {
+                  "position": "LEFT_AXIS",
+                  "title": "Sales"
+                }
+              ],
+              "domains": [
+                {
+                  "domain": {
+                    "sourceRange": {
+                      "sources": [
+                        {
+                          "sheetId": "",
+                          "startRowIndex": 0,
+                          "endRowIndex": 7,
+                          "startColumnIndex": 0,
+                          "endColumnIndex": 1
+                        }
+                      ]
+                    }
+                  }
+                }
+              ],
+              "series": [
+                {
+                  "series": {
+                    "sourceRange": {
+                      "sources": [
+                        {
+                          "sheetId": "",
+                          "startRowIndex": 0,
+                          "endRowIndex": 7,
+                          "startColumnIndex": 1,
+                          "endColumnIndex": 2
+                        }
+                      ]
+                    }
+                  },
+                  "targetAxis": "LEFT_AXIS"
+                },
+                {
+                  "series": {
+                    "sourceRange": {
+                      "sources": [
+                        {
+                          "sheetId": "",
+                          "startRowIndex": 0,
+                          "endRowIndex": 7,
+                          "startColumnIndex": 2,
+                          "endColumnIndex": 3
+                        }
+                      ]
+                    }
+                  },
+                  "targetAxis": "LEFT_AXIS"
+                },
+                {
+                  "series": {
+                    "sourceRange": {
+                      "sources": [
+                        {
+                          "sheetId": "",
+                          "startRowIndex": 0,
+                          "endRowIndex": 7,
+                          "startColumnIndex": 3,
+                          "endColumnIndex": 4
+                        }
+                      ]
+                    }
+                  },
+                  "targetAxis": "LEFT_AXIS"
+                }
+              ],
+              "headerCount": 1
+            }
+          },
+          "position": {
+            "newSheet": true
+          }
+        }
+      }
+    }
+  ]
+}
