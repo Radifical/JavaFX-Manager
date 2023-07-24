@@ -9,12 +9,12 @@ A student manager for my tutoring center. Created to make everything more effici
 
 # Features
 - Secured login for managers
-  https://imgur.com/vVnA0KT
+  ![Untitled (1)](https://imgur.com/vVnA0KT)
 -  Manager
-  https://imgur.com/ZAPDio3
+  ![Untitled (2)](https://imgur.com/ZAPDio3)
 - Generate PDFs for daily attendance and receipts for purchases
-  https://imgur.com/D9HDCnk
-  https://imgur.com/g35QHvm
+  ![Untitled (3)](https://imgur.com/D9HDCnk)
+  ![Untitled (34)](https://imgur.com/g35QHvm)
 
  # Usage
 Edit DatabaseConnection.java
