@@ -55,8 +55,14 @@
                   <Font name="Segoe UI Bold" size="13.0" />
                </font>
             </Text>
-            <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="68.0" layoutY="206.0" style="-fx-background-color: white;" />
-            <PasswordField fx:id="passwordPasswordField" alignment="CENTER" layoutX="68.0" layoutY="244.0" style="-fx-background-color: white;" />
+           <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="68.0" layoutY="206.0"
+           promptText="Enter username"
+           style="-fx-background-color: white;" />
+
+            <PasswordField fx:id="passwordPasswordField" alignment="CENTER" layoutX="68.0" layoutY="244.0"
+               promptText="Enter password"
+               style="-fx-background-color: white;" />
+
             <Button fx:id="loginButton" layoutX="-4.0" layoutY="282.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: #778da9; -fx-background-radius: 0;" text="Login" textFill="WHITE" />
             <Text fill="#e0e1dd" layoutX="-37.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secure Login" textAlignment="CENTER" wrappingWidth="290.09765625">
                <font>
